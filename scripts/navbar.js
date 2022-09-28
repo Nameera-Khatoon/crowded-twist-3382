@@ -6,7 +6,33 @@ let left_div=document.createElement("div")// left tabs
 let right_div=document.createElement("div")//right corner
 
 let tabs=[ {"name":"WOMEN"},{"name":"MEN"},{"name":"BEAUTY"},{"name":"KIDS"},{"name":"HOME"},{"name":"DESIGNERS"},{"name":"COMMUNITY"},{"name":"WHY MODESENS"},{"name":"SALE"},] //child-left tab
-let left_tab=[{"i":,"span":}] 
+let span=[
+    { "img":"","span":"COUNTRIES & LANGUAGES"},
+    {"i":'<i class="fa-thin fa-bell"></i>',"span":"notification"},
+    {"span":"checkout"},
+    {"span":"avtar"},
+    {"span":"search"}
+]
+
+let i=document.createElement("i")
+// i.innerHTML="<i class='fa-thin fa-bell'></i>"
+console.log(i)
+span.forEach(function(el){
+    let div=document.createElement("div");
+    let btn=document.createElement("button");
+})
+
+
+
+
+
+
+
+
+
+
+let noti=document.createElement("div")
+
 
 let logoImg=document.createElement("img");
 // logoImg.src
@@ -22,7 +48,7 @@ tabs.forEach(function(el){
 })
 
 
-space_div=document.createElement(div)
+let space_div=document.createElement("div");
 
 
 nav.append(a_logo,left_div,space_div,right_div)
