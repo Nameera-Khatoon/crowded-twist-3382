@@ -19,6 +19,9 @@ let bot=document.createElement("div")
 // ----top data------------------
 let top1=document.createElement("div")
 let top2=document.createElement("div")
+let t_x1=0;
+let t_x2=12;
+
 // child1
 let topbanner=document.createElement("img")
 
@@ -45,52 +48,67 @@ top1.append(topbanner,tDiv,p)
 // child2
 let top2_head=document.createElement("p")
 let top2_txt=document.createElement("p")
+
 top2_head.innerText="Featured Partners"
 top2_txt.innerText="Compare across our 500+ partner stores to find the products you want at the best price."
 top1.append(topbanner,tDiv,p)
 top2.append(top2_head,top2_txt)
 div.append(top,mid)
 main.append(div)
-console.log(featurepatner[0]["brand-logo"])
+// console.log(featurepatner[0]["brand-logo"])
 let top2div=document.createElement("div")
-top2div.append(onthearrow(featurepatner,"brand-logo",0,12,top2div,"featur-ul"))
+
+let top2_div=document.createElement("div")
+top2_div.setAttribute("id","slide-pat")
 // console.log(top2div.innerHTML=null)
 // top2div.append(onthearrow(featurepatner,20))
+let arr1=document.createElement("div")
+arr1.innerHTML='<i class="fa-solid fa-arrow-left"></i>'
+arr1.setAttribute("id","arrow1")
+arr1.addEventListener("click",left)
+function left(){
+    // console.log("imfunc")
+    let x=t_x2;
+        var click=x;
+         top2div.append(onthearrow(featurepatner,"brand-logo",-12,x,top2div,"featur-ul"))
+        
+        // console.log(click)
 
-top2.append(top2div)
+       
+}
+let arr2=document.createElement("div")
+arr2.setAttribute("id","arrow2")
+arr2.addEventListener("click",right)
+function right(){
+    console.log("imfunc")
+    let x=t_x2 ;
+     
+        top2div.append(onthearrow(featurepatner,"brand-logo",x,12,top2div,"featur-ul"))
+           
+}
+console.log(featurepatner.length) 
+arr2.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
+top2div.append(onthearrow(featurepatner,"brand-logo",12,12 ,top2div,"featur-ul"))
+top2_div.append(arr1,top2div,arr2)
+top2.append(top2_div)
+
 top.append(top1,top2)
-// onthearrow(featurepatner,0)
 
-// function onthearrow(data,key,x,y,div,ul2){
-//     var ul2=document.createElement("div")
-   
-//     div.innerHTML=null
-//     ul2.setAttribute("class","featur-ul")
-//     for(let i=x;i<x+y;i++){    
-//         let di=document.createElement("div")
-//         let li=document.createElement("div");
-      
-//         let img=document.createElement("img")
-//         img.src=data[i][key]
-//         li.setAttribute("type","none")
-//         li.appendChild(img)
-//         li.setAttribute("class","ul-li")
-//        console.log(i)
-//        di.appendChild(li)
-//        ul2.appendChild(di)
-//     }
-//     // console.log(ul2)
-//     return ul2
-// }
-// --------top-end---------------------------------
-
-function onthearrow(data,key,x,y,div,atribute,ul2){
+function onthearrow(data,key,x,y,div,class1,ul2){
     var ul2=document.createElement("div")
-   
+    if(x<0){
+        x=0
+    }
+    if((x+y)<=0){
+        x=y
+        y=12
+    }
     div.innerHTML=null
-    ul2.setAttribute("class",atribute)
+    ul2.setAttribute("class",class1)
+    
     for(let i=x;i<x+y;i++){    
         let di=document.createElement("div")
+
         let li=document.createElement("div");
       
         let img=document.createElement("img")
@@ -98,7 +116,7 @@ function onthearrow(data,key,x,y,div,atribute,ul2){
         li.setAttribute("type","none")
         li.appendChild(img)
         li.setAttribute("class","ul-li")
-       console.log(i)
+    //    console.log(i)
        di.appendChild(li)
        ul2.appendChild(di)
     }
@@ -106,24 +124,78 @@ function onthearrow(data,key,x,y,div,atribute,ul2){
     return ul2
 }
 
-
 // mid
 
-// let offer12=document.createElement("div")
-let div1=document.createElement("div")
-div1.append(onthearrow(offers,"specialOffers",0,3,div1,"midoffer"))
+let specialoffer=document.createElement("div")
+specialoffer.setAttribute("id","offer")
+let Trending=document.createElement("div")
+Trending.setAttribute("id","trend")
+let Recently=document.createElement("div")
+Recently.setAttribute("id","recent")
+let Community=document.createElement("div")
+Community.setAttribute("id","community")
 
-// offer12.append(onthearrow(offers,"specialOffers",0,3,offer12))
+for(let i=0;i<=5;i++){
+    let div=document.createElement("div")
+    // let imgdiv
+    // let img=document.createElement("img")
+    specialoffer.append(div)
+}
 
-// mid.append(offer12)
+// console.log(offers[0])
+mid.append(specialoffer,Trending,Recently,Community)
 
-let trend=[
-    {"link":"https://cdn.modesens.com/availability/51061386?w=400&"}
-]
-let div2=document.createElement("div")
-div2.append((onthearrow(offers,"specialOffers",0,4,div2,"trend")))
-let div3=document.createElement("div")
 
-div3.append((onthearrow(offers,"specialOffers",0,4,div3,"mid-3")))
-// mid.append(div2)
-mid.append(div1,div2,div3)
+function dat(data,key,x,y,div,id1,ul2){
+    var ul2=document.createElement("div")
+   
+    div.innerHTML=null
+    ul2.setAttribute("id",id1)
+    for(let i=x;i<=(x+y);i++){    
+        let di=document.createElement("div")
+        di.setAttribute("class","container1")
+        
+        let li1=document.createElement("div");
+        let li2=document.createElement("div"); 
+        li1.setAttribute("class","container1-ch1")
+        li2.setAttribute("class","container1-ch2")
+        let img1=document.createElement("img");
+        img1.src=data[i][key]
+        let dis=document.createElement("p")
+        dis.innerText=data[i]["disc"]
+        // dis.ine
+        let hed=document.createElement("p")
+        hed.innerText=data[i]["head"]
+        let type=document.createElement("p")
+        type.innerText=data[i]["p"]
+        let btn=document.createElement("div")
+        btn.innerHTML='<a href="#"> SHOP NOW </a>'
+        btn.setAttribute("class","button1")
+       
+    
+        li2.append(hed,type,btn)
+        // console.log(hed)
+  
+       
+        li1.append(img1,dis)
+      
+        
+  
+       di.append(li1,li2)
+       ul2.append(di)
+    
+    }
+    
+    return ul2
+}
+let btn=document.createElement("div")
+btn.innerHTML='<a href="#"> view More </a>'
+btn.setAttribute("class","button1 view")
+let offerin=document.createElement("div")
+offerin.append(dat(offers,"img",0,5,specialoffer,"inoffer"),btn)
+specialoffer.append(offerin)
+// let arr1
+let inofer=document.querySelector("#offer>div")
+
+// console.log(offerin)
+// console.log(inofer)

@@ -1,26 +1,41 @@
 [
     {
-     "specialOffers": "https://cdn.modesens.com/availability/56910668?w=400&"
+     "img": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","pht":" Photo: ANTHROPOLOGIE"
+     ,"head":"Smart & Stylish"
+     ,"p":"Tech Accessories",
+     "disc":"Photo: ANTHROPOLOGIE"
+  
     },
     {
-     "specialOffers": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","pht":" Photo: ANTHROPOLOGIE"
-     ,"h":"Smart & Stylish"
-     ,"p":"Tech Accessories"
+     "img": "https://modesens.com/banner/12409/getimg/?img=%2Fbanner%2F20220608-modesens-Anthropologie-364x484-H.jpg","pht":"Photo: FRONTGATE",
+     "head":"Four-Legged Style",
+     "p":"Pet Accessories",
+     "disc" :"Photo: NEST NEW YORK"
     },
     {
-     "specialOffers": "https://modesens.com/banner/12409/getimg/?img=%2Fbanner%2F20220608-modesens-Anthropologie-364x484-H.jpg","pht":"Photo: FRONTGATE",
-     "h":"Four-Legged Style",
-     "p":"Pet Accessories"
-    },
+        "img": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","pht":" Photo: ANTHROPOLOGIE"
+        ,"head":"Smart & Stylish"
+        ,"p":"Tech Accessories",
+        "disc" :"Photo: NEST NEW YORK"
+       },
+       {
+        "img": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","pht":" Photo: ANTHROPOLOGIE"
+        ,"head":"Smart & Stylish"
+        ,"p":"Tech Accessories",
+        "disc" :"Photo: NEST NEW YORK"
+       },
     {
-     "specialOffers": "https://modesens.com/banner/12408/getimg/?img=%2Fbanner%2F20220608-modesens-Nest-364x484-H.jpg","h":"The Sents Of Home"
-    },
-    {
-     "specialOffers": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","h":"The Sents Of Home"
-    },
-    {
-     "specialOffers": "https://modesens.com/banner/12409/getimg/?img=%2Fbanner%2F20220608-modesens-Anthropologie-364x484-H.jpg","h":"The Sents Of Home"
-    }
+        "img": "https://modesens.com/banner/12409/getimg/?img=%2Fbanner%2F20220608-modesens-Anthropologie-364x484-H.jpg","pht":"Photo: FRONTGATE",
+        "head":"Four-Legged Style",
+        "p":"Pet Accessories",
+        "disc":"Photo: ANTHROPOLOGIE"
+       },
+       {
+        "img": "https://modesens.com/banner/12410/getimg/?img=%2Fbanner%2F20220608-modesens-Frontgate-364x484-H.jpg","pht":" Photo: ANTHROPOLOGIE"
+        ,"head":"Smart & Stylish"
+        ,"p":"Tech Accessories",
+        "disc" :"Photo: NEST NEW YORK"
+       }
    ]
 
 
