@@ -72,7 +72,7 @@ function left(){
     let x=t_x2;
         var click=x;
          top2div.append(onthearrow(featurepatner,"brand-logo",-12,x,top2div,"featur-ul"))
-        
+         t_x2=x
         // console.log(click)
 
        
@@ -85,7 +85,7 @@ function right(){
     let x=t_x2 ;
      
         top2div.append(onthearrow(featurepatner,"brand-logo",x,12,top2div,"featur-ul"))
-           
+        t_x2 =x  
 }
 console.log(featurepatner.length) 
 arr2.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
@@ -277,8 +277,10 @@ arr23.setAttribute("class","arrow4")
 arr23.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
 arr23.style.width="40px"
 // arr22.addEventListener("click",right)
-r_div2.append(arr12,dat2(prod,"img",4,3,r_div2,"homP"),arr22)
-r_div.append(arr13,dat2(prod,"img",0,3,r_div,"homP"),arr23)
+let r2=4;
+let r1=0;
+r_div2.append(arr12,dat2(prod,"img",r2,3,r_div2,"homP"),arr22)
+r_div.append(arr13,dat2(prod,"img",r1,3,r_div,"homP"),arr23)
 let cont =document.querySelector(".container")
 // onthearrow(data,key,x,y,div,class1,ul2)
 console.log((cont))
@@ -287,6 +289,59 @@ console.log((cont))
 // r_div2.style.display="grid"
 Recently.append(r_div2)
 Recently.style.display="flex"
+let ar1=document.getElementsByClassName("arrow4")
+let ar2=document.getElementsByClassName("arrow3")
+// console.log(nameera[0])
+ar1[1].addEventListener("click",function(){
+    let x=r1+3
+    if(x>prod.length-1){
+        x=prod.length-1
+        r1=x
+    }else{
+        r_div.append(arr13,dat2(prod,"img",x,3,r_div,"homP"),arr23)
+        r1=x
+    }
+   
+})
+ar1[2].addEventListener("click",function(){
+    let x=r2+3
+    if(x>prod.length-1){
+        x=prod.length-1
+        // r2=x
+    }else{
+        r_div2.append(arr12,dat2(prod,"img",x,3,r_div2,"homP"),arr22)
+        r2=x
+    }
+   
+})
+
+
+ar2[1].addEventListener("click",function(){
+    let x=r1-3
+    let y=3
+    if(x<0){
+        // x=0
+        x=0
+
+    }else{
+        r_div.append(arr13,dat2(prod,"img",x,y,r_div,"homP"),arr23)
+    }
+    
+    r1=x
+})
+ar2[2].addEventListener("click",function(){
+    let x=r2-3
+    let y=3
+    if(x<3){
+        // x=0
+        x=3
+
+    }else{
+        r_div2.append(arr12,dat2(prod,"img",x,3,r_div2,"homP"),arr22)
+    }
+    
+    r2=x
+})
 
 // console.log(offerin)
 // console.log(inofer)
