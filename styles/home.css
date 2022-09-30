@@ -121,7 +121,7 @@
 
 #offers{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  /* grid-template-columns: repeat(4,1fr); */
   /* grid-template-rows: 0px; */
   /* position: absolute; */
 }
@@ -129,18 +129,24 @@
 
 
 
-#mid>div{
+.midoffer{
   /* background-color: red; */
   height: auto;
 
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   
   gap:30px;
   text-align: center;
 }
 
+
 #mid>div>div>div>img{
   width: 100%;
 }
 
+.trend{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}

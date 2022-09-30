@@ -4,6 +4,7 @@ import offers from '../Json/specialoffers.json' assert {type: 'json'}
 
 var main=document.getElementById("maincontent")
 let div=document.createElement("div")
+
 div.setAttribute("id","main-div")
 // console.log(main)
 main.append(div)
@@ -52,7 +53,7 @@ div.append(top,mid)
 main.append(div)
 console.log(featurepatner[0]["brand-logo"])
 let top2div=document.createElement("div")
-top2div.append(onthearrow(featurepatner,"brand-logo",0,12,top2div))
+top2div.append(onthearrow(featurepatner,"brand-logo",0,12,top2div,"featur-ul"))
 // console.log(top2div.innerHTML=null)
 // top2div.append(onthearrow(featurepatner,20))
 
@@ -60,11 +61,34 @@ top2.append(top2div)
 top.append(top1,top2)
 // onthearrow(featurepatner,0)
 
-function onthearrow(data,key,x,y,div,ul2){
+// function onthearrow(data,key,x,y,div,ul2){
+//     var ul2=document.createElement("div")
+   
+//     div.innerHTML=null
+//     ul2.setAttribute("class","featur-ul")
+//     for(let i=x;i<x+y;i++){    
+//         let di=document.createElement("div")
+//         let li=document.createElement("div");
+      
+//         let img=document.createElement("img")
+//         img.src=data[i][key]
+//         li.setAttribute("type","none")
+//         li.appendChild(img)
+//         li.setAttribute("class","ul-li")
+//        console.log(i)
+//        di.appendChild(li)
+//        ul2.appendChild(di)
+//     }
+//     // console.log(ul2)
+//     return ul2
+// }
+// --------top-end---------------------------------
+
+function onthearrow(data,key,x,y,div,atribute,ul2){
     var ul2=document.createElement("div")
    
     div.innerHTML=null
-    ul2.setAttribute("class","featur-ul")
+    ul2.setAttribute("class",atribute)
     for(let i=x;i<x+y;i++){    
         let di=document.createElement("div")
         let li=document.createElement("div");
@@ -81,15 +105,13 @@ function onthearrow(data,key,x,y,div,ul2){
     // console.log(ul2)
     return ul2
 }
-// --------top-end---------------------------------
-
 
 
 // mid
 
 // let offer12=document.createElement("div")
-
-mid.append(onthearrow(offers,"specialOffers",0,3,mid))
+let div1=document.createElement("div")
+div1.append(onthearrow(offers,"specialOffers",0,3,div1,"midoffer"))
 
 // offer12.append(onthearrow(offers,"specialOffers",0,3,offer12))
 
@@ -98,5 +120,10 @@ mid.append(onthearrow(offers,"specialOffers",0,3,mid))
 let trend=[
     {"link":"https://cdn.modesens.com/availability/51061386?w=400&"}
 ]
+let div2=document.createElement("div")
+div2.append((onthearrow(offers,"specialOffers",0,4,div2,"trend")))
+let div3=document.createElement("div")
 
-trenddiv.append((onthearrow(offers,"specialOffers",0,4,trenddiv)))
+div3.append((onthearrow(offers,"specialOffers",0,4,div3,"mid-3")))
+// mid.append(div2)
+mid.append(div1,div2,div3)
