@@ -11,11 +11,11 @@
 }
 #top>:nth-child(1){
   /* heigh ; */
-  max-height:400px;
+  max-height:370px;
   /* line-height:0; */
   height: auto;
   /* margin-bottom: 20px; */
-  background-color:  blueviolet;
+  /* background-color:  blueviolet; */
   
  
 }
@@ -68,6 +68,9 @@
   /* background-color: aqua; */
   text-align: center;
   line-height: 10px;
+  margin: auto;
+  
+  /* background-color: aqua; */
   
 }
 #top>:nth-child(2)>:nth-child(1){
@@ -75,40 +78,69 @@
   font-weight: 600;
   font-size: 30px;
   color: rgb(28,28,52);
+  text-align: center;
+  
+  /* background-color: aqua; */
 }
 
 #top>:nth-child(2)>:nth-child(2){
-  
+  /* width: 80%; */
   font-weight: 100;
   font-size: 22px;
   color: #8d9397;
-  /* line-height: 1px; */
+  text-align: center;
+  display: block;
+  
 
 }
 .featur-ul img{
-  /* width: 10px; */
+  width: 100%;
+  /* height: ; */
   border: 0px solid red;
   display: block;
 }
 .featur-ul{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(1,100px);
   gap:20px;
   border: 0px solid rebeccapurple;
-  justify-content: space-evenly ;
+  justify-content: center ;
   justify-items:center;
 
   
 }
 
-.featur-ul li{
-  /* list-style-type: */
-  /* background-color: #8d9397; */
-  
-}
+
 .featur-ul img{
   border: 0px solid red;
   display: block;
   padding: 10px;
 }
+
+#offers{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* grid-template-rows: 0px; */
+  /* position: absolute; */
+}
+
+
+
+
+#mid>div{
+  /* background-color: red; */
+  height: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+  gap:30px;
+  text-align: center;
+}
+
+#mid>div>div>div>img{
+  width: 100%;
+}
+

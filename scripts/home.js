@@ -1,5 +1,7 @@
 import homeTop from '../Json/HomeBanner.json' assert {type: 'json'}
 import featurepatner from '../Json/patner.json' assert {type: 'json'}
+import offers from '../Json/specialoffers.json' assert {type: 'json'}
+
 var main=document.getElementById("maincontent")
 let div=document.createElement("div")
 div.setAttribute("id","main-div")
@@ -9,12 +11,14 @@ main.append(div)
 let top=document.createElement("div")
 top.setAttribute("id","top")
 let mid=document.createElement("div")
+mid.setAttribute("id","mid")
+var trenddiv=document.createElement("div")
 let bot=document.createElement("div")
 // console.log(homeTop)
-
+// ----top data------------------
 let top1=document.createElement("div")
 let top2=document.createElement("div")
-// top1
+// child1
 let topbanner=document.createElement("img")
 
 topbanner.src=homeTop[0].banner
@@ -35,38 +39,64 @@ p.innerText="Photo: MACY'S"
 tDiv.append(p1,p2,a)
 top1.append(topbanner,tDiv,p)
 
-// endtop1
+// endchild1
 
-// top2
+// child2
 let top2_head=document.createElement("p")
 let top2_txt=document.createElement("p")
 top2_head.innerText="Featured Partners"
 top2_txt.innerText="Compare across our 500+ partner stores to find the products you want at the best price."
-
 top1.append(topbanner,tDiv,p)
 top2.append(top2_head,top2_txt)
-
-
-
-div.append(top,mid,bot)
+div.append(top,mid)
 main.append(div)
-
 console.log(featurepatner[0]["brand-logo"])
 let top2div=document.createElement("div")
-let ul=document.createElement("div")
-ul.setAttribute("class","featur-ul")
-for(let i=0;i<10;i++){
-    let li=document.createElement("li");
-    let img=document.createElement("img")
-    img.src=featurepatner[i]["brand-logo"]
-    li.setAttribute("type","none")
-    li.appendChild(img)
-    li.setAttribute("class","ul-li")
-   
-   ul.append(li)
-}
-top2div.append(ul)
+top2div.append(onthearrow(featurepatner,"brand-logo",0,12,top2div))
+// console.log(top2div.innerHTML=null)
+// top2div.append(onthearrow(featurepatner,20))
+
 top2.append(top2div)
 top.append(top1,top2)
+// onthearrow(featurepatner,0)
 
-// console.log(homeTop[0].banner)
+function onthearrow(data,key,x,y,div,ul2){
+    var ul2=document.createElement("div")
+   
+    div.innerHTML=null
+    ul2.setAttribute("class","featur-ul")
+    for(let i=x;i<x+y;i++){    
+        let di=document.createElement("div")
+        let li=document.createElement("div");
+      
+        let img=document.createElement("img")
+        img.src=data[i][key]
+        li.setAttribute("type","none")
+        li.appendChild(img)
+        li.setAttribute("class","ul-li")
+       console.log(i)
+       di.appendChild(li)
+       ul2.appendChild(di)
+    }
+    // console.log(ul2)
+    return ul2
+}
+// --------top-end---------------------------------
+
+
+
+// mid
+
+// let offer12=document.createElement("div")
+
+mid.append(onthearrow(offers,"specialOffers",0,3,mid))
+
+// offer12.append(onthearrow(offers,"specialOffers",0,3,offer12))
+
+// mid.append(offer12)
+
+let trend=[
+    {"link":"https://cdn.modesens.com/availability/51061386?w=400&"}
+]
+
+trenddiv.append((onthearrow(offers,"specialOffers",0,4,trenddiv)))
