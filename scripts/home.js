@@ -12,6 +12,7 @@ let top=document.createElement("div")
 top.setAttribute("id","top")
 let mid=document.createElement("div")
 mid.setAttribute("id","mid")
+var trenddiv=document.createElement("div")
 let bot=document.createElement("div")
 // console.log(homeTop)
 // ----top data------------------
@@ -47,7 +48,7 @@ top2_head.innerText="Featured Partners"
 top2_txt.innerText="Compare across our 500+ partner stores to find the products you want at the best price."
 top1.append(topbanner,tDiv,p)
 top2.append(top2_head,top2_txt)
-div.append(top,mid,bot)
+div.append(top,mid)
 main.append(div)
 console.log(featurepatner[0]["brand-logo"])
 let top2div=document.createElement("div")
@@ -86,15 +87,16 @@ function onthearrow(data,key,x,y,div,ul2){
 
 // mid
 
+// let offer12=document.createElement("div")
 
 mid.append(onthearrow(offers,"specialOffers",0,3,mid))
-for(let i=0;i<3;i++){
 
-}
+// offer12.append(onthearrow(offers,"specialOffers",0,3,offer12))
+
+// mid.append(offer12)
 
 let trend=[
     {"link":"https://cdn.modesens.com/availability/51061386?w=400&"}
 ]
 
-let trenddiv=document.createElement("div")
-// div
+trenddiv.append((onthearrow(offers,"specialOffers",0,4,trenddiv)))
