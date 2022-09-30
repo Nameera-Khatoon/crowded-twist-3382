@@ -1,6 +1,7 @@
 import homeTop from '../Json/HomeBanner.json' assert {type: 'json'}
 import featurepatner from '../Json/patner.json' assert {type: 'json'}
 import offers from '../Json/specialoffers.json' assert {type: 'json'}
+import prod from '../Json/product.json' assert {type: 'json'}
 
 var main=document.getElementById("maincontent")
 let div=document.createElement("div")
@@ -153,7 +154,7 @@ function dat(data,key,x,y,div,id1,ul2){
     ul2.setAttribute("id",id1)
     for(let i=x;i<=(x+y);i++){    
         let di=document.createElement("div")
-        di.setAttribute("class","container1")
+        di.setAttribute("class","container")
         
         let li1=document.createElement("div");
         let li2=document.createElement("div"); 
@@ -191,11 +192,101 @@ function dat(data,key,x,y,div,id1,ul2){
 let btn=document.createElement("div")
 btn.innerHTML='<a href="#"> view More </a>'
 btn.setAttribute("class","button1 view")
+let arr45=document.createElement("div")
+arr45.innerHTML='<i class="fa-solid fa-arrow-left"></i>'
+arr45.setAttribute("class","arrow3")
+arr45.style.width="40px"
+// arr12.addEventListener("click",left)
+let arr46=document.createElement("div")
+arr46.setAttribute("class","arrow4")
+arr46.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
+arr46.style.width="40px"
 let offerin=document.createElement("div")
-offerin.append(dat(offers,"img",0,5,specialoffer,"inoffer"),btn)
+offerin.append(arr45,dat(offers,"img",0,2,specialoffer,"inoffer"),arr46)
+offerin.style.display="flex"
 specialoffer.append(offerin)
 // let arr1
 let inofer=document.querySelector("#offer>div")
+
+
+function dat2(data,key,x,y,div,id1,ul2){
+    var ul2=document.createElement("div")
+   
+    div.innerHTML=null
+    ul2.setAttribute("id",id1)
+    for(let i=x;i<=(x+y);i++){    
+        let di=document.createElement("div")
+        di.setAttribute("class","container0")
+        
+        let li1=document.createElement("div");
+        let li2=document.createElement("div"); 
+        li1.setAttribute("class","container1")
+        li2.setAttribute("class","container2")
+        let btn=document.createElement("div")
+        btn.innerHTML='<a href="#"> Quick View </a>'
+        btn.setAttribute("class","button")
+        let img=document.createElement("img");
+     
+        let hed=document.createElement('p');
+        hed.setAttribute("class","heading")
+        hed.innerText=prod[i]["head"]
+        let dis=document.createElement('span');
+        dis.innerText=prod[i]["line-disc"]
+        let price=document.createElement('p');
+        price.innerText=prod[i]["price"]
+        price.setAttribute("class","price")
+        let stor=document.createElement('p');
+        stor.innerText=prod[i]["noofstores"]
+        li2.append(hed,dis,price,stor)
+        // console.log(hed)
+  
+        img.src=data[i][key]
+        li1.append(img,btn)
+      
+        
+  
+       di.append(li1,li2)
+       ul2.append(di)
+    
+    }
+    
+    return ul2
+}
+
+let r_div=document.createElement("div")
+let r_div2=document.createElement("div")
+
+Trending.append(r_div)
+
+let arr12=document.createElement("div")
+arr12.innerHTML='<i class="fa-solid fa-arrow-left"></i>'
+arr12.setAttribute("class","arrow3")
+arr12.style.width="40px"
+// arr12.addEventListener("click",left)
+let arr22=document.createElement("div")
+arr22.setAttribute("class","arrow4")
+arr22.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
+arr22.style.width="40px"
+let arr13=document.createElement("div")
+arr13.innerHTML='<i class="fa-solid fa-arrow-left"></i>'
+arr13.setAttribute("class","arrow3")
+arr13.style.width="40px"
+// arr12.addEventListener("click",left)
+let arr23=document.createElement("div")
+arr23.setAttribute("class","arrow4")
+arr23.innerHTML='<i class="fa-solid fa-arrow-right"></i>'
+arr23.style.width="40px"
+// arr22.addEventListener("click",right)
+r_div2.append(arr12,dat2(prod,"img",4,3,r_div2,"homP"),arr22)
+r_div.append(arr13,dat2(prod,"img",0,3,r_div,"homP"),arr23)
+let cont =document.querySelector(".container")
+// onthearrow(data,key,x,y,div,class1,ul2)
+console.log((cont))
+// cont.append(cont)
+
+// r_div2.style.display="grid"
+Recently.append(r_div2)
+Recently.style.display="flex"
 
 // console.log(offerin)
 // console.log(inofer)
