@@ -1,0 +1,109 @@
+
+
+#maincontent > div{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    margin: auto;
+    border: 1px solid black;
+
+}
+
+#left{
+
+    /* width: 100px; */
+    background-color: aqua;
+}
+#homP{
+    display: grid;
+    grid-template-columns:repeat(4,2fr);
+    grid-template-rows: repeat(10,auto);
+    border: 1px solid black;
+    
+}
+
+#homP img{
+    width: 70%;
+    max-height: 250px;
+    display: block;
+    margin: auto;
+    /* margin: 30px; */
+    /* height: 500px; */
+}
+
+.hide-bt{
+    font-size: 14px;
+    /* padding: 5px 25px; */
+    display:block;
+    
+    margin: auto;
+    opacity: 1;
+    /* position: static; */
+    height: 10; width: 220;
+    text-align: center;
+    /* bottom: 4rem; */
+    /* display: none; */
+}
+
+.hide-bt:hover{
+    padding: -30px;
+    opacity: 1;
+    width: 200px;
+    height: 20px;
+    font-size: large;
+    position:static;
+     overflow:visible;
+    padding: 25px 25px;
+    text-align: start;
+    display: grid;
+    align-items: center;
+    
+  
+}
+.button {
+    position: absolute;
+    border: 0.3px solid;
+ 
+    width: 200px;
+    /* display: block;
+     */
+    /* padding-top: 20px; */
+    border-radius: 3px;
+    padding:8px 22px; 
+    text-align: center;
+    position: relative;
+
+    margin-left: 30px;
+    margin-bottom: 3px;
+  
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  .container1:hover .button {
+    opacity: 1;
+   
+  }
+  .button a{
+    color: rgb(57, 49, 49);
+    font-weight: 500;
+    text-decoration: none;
+    
+  }
+  
+  .container2{
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+  }
+  .heading{
+    color: rgb(27, 25, 25);
+    font-size: 20px;
+}
+.price{
+    color: black;
+}
+.container{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 40px;
+    padding: 0px;
+}
