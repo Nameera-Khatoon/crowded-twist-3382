@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>body {margin: 0; padding: 0;
+background-color: rgba(0, 0, 0, 0.4) ;
+}
+
+        .Login { width:30%;padding: 30px;
+            margin: auto;
+             margin-top: 30px;
+             /* box-shadow: rgba(247, 247, 247, 0.24) 0px 3px 8px; */
+            }
+
+        
+        .Login>form{width: 80%;
+             margin: auto;
+              background-color: white;
+              padding: 40px;
+               text-align: center;
+                border-radius: 8px; 
+                border:none;}
+        .Login>form>input {width: 95%; 
+            padding: 8px 2.5%; 
+            opacity: .4;
+             font-size: 18px; 
+             margin-top: 20px;
+              border:none; 
+              border-bottom: 1px solid rgb(118, 107, 107);}
+        .Login>form>input[type="submit"] {
+            width: 101%; margin-bottom: 30px; 
+            background: rgb(165, 125, 50); 
+            color:white; opacity: 1; 
+            border:none; 
+            padding: 12px 0;}
+a[href="#supernova"],a[href="signup.html"] {
+    color: rgb(0, 0, 0);
+     text-decoration: none; 
+     font-size: 17px;}
+a[href="#supernova"]:hover,
+a[href="signup.html"]:hover 
+{color:rgb(0, 0, 0);}
+        .Login>form>input:hover 
+        {opacity: 1; border:none; 
+            border-bottom: 2px solid black;}
+        .Login>form>input[type="submit"]:hover 
+        {background-color: rgb(0, 0, 0); color: white;
+             opacity: 1; border:none; cursor: pointer;}
+
+        @media screen and (min-width:100px) and (max-width: 500px)
+        {
+            .Login{width:80%; padding: 25px;}
+        }
+        @media screen and (min-width: 501px) and (max-width: 800px){
+            .Login{width: 50%; padding: 35px;}
+        }
+        
+</style>
+
+</head>
+<body>
+    
+    <div class="Login">
+<form>
+    <h2>Login</h2>
+<input type="Email" id="logemail" placeholder="Enter Email">
+<input type="password" id = "logpassword" placeholder="Enter Password">
+<input type="submit" value="Login">
+<p>Forgot <a href="#supernova">Password</a>?</p>
+<p>Don't have an account? <a href="signup.html" style="color:blue">Signup<a></p>
+
+</form>
+    </div>
+</body>
+</html>
+<script>
+   let login = document.querySelector(".Login>form");
+login.addEventListener("submit",log)
+
+function log(){
+let email = document.getElementById("logemail").value;
+let password = document.getElementById("logpassword").value;
+let semail = localStorage.getItem("email");
+let spassword = localStorage.getItem("password")
+if(email=="" || password ==""){
+alert("Please fill all infromation");
+}
+else{
+    if(email== semail && password==spassword){
+        alert("<a href='index.html'>RETURN</a>")
+        // window.open("index.html")
+        // index.html
+    }else{
+        alert("Either email or password is incorrect")
+    }
+}
+}
+
+let snu = document.querySelector(".Login>form>p>span");
+
+</script>
