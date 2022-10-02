@@ -17,9 +17,10 @@ function dat(data,key,x,y,div,id1,ul2){
         li2.setAttribute("class","container2")
         let btn=document.createElement("div")
         btn.innerHTML='<a href="#"> Add to Cart </a>'
+       
         btn.addEventListener("click",function(){
             addtocat.push(data[i])
-          
+            // alert("added to cart")
             localStorage.setItem("product",  JSON.stringify(addtocat))
             console.log(addtocat)
         })

@@ -1,5 +1,7 @@
 let tbody=document.querySelector('main')
-let buylist=JSON.parse(localStorage.getItem("product"))
+let buylist=JSON.parse(localStorage.getItem("product"))||[]
+
+// let buylist1=JSON.parse(localStorage.getItem("buy-list"))||[]
 
 
 
@@ -10,7 +12,7 @@ let maindiv=document.createElement("div")
 tbody.append(maindiv)
 maindiv.setAttribute("id","main")
 
-
+// console.log()
 
 let div=document.createElement("div")
    
@@ -23,15 +25,19 @@ let div=document.createElement("div")
         div1.append(imag)
         let div2=document.createElement("div")
         let hed=document.createElement("p")
-        hed.setAttribute("class","hed")
         hed.innerText=buylist[i]["head"]
-        
         let dis=document.createElement("p")
         dis.innerText=buylist[i]["line-disc"]
         let pric=document.createElement("p")
         pric.innerText=buylist[i]["price"]
-        pric.setAttribute("id","price")
-        div2.append(hed,dis,pric)
+        let btn=document.createElement("button")
+        btn.innerText="REMOVE"
+        btn.addEventListener("click",function(){
+            alert("deleted")
+            removing(buylist[i],i)
+            location.reload();
+        })
+        div2.append(hed,dis,pric,btn)
     
         div0.append(div1,div2)
         div.append(div0)
@@ -40,5 +46,16 @@ let div=document.createElement("div")
 
 
 console.log(div)
+div.style.display='grid'
+
 maindiv.append(div)
+
+
+
+function removing(element,index){
+   
+    buylist.splice(index,1)
+    
+    localStorage.setItem("product",JSON.stringify(buylist))
+}
 
