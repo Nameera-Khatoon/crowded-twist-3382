@@ -17,6 +17,7 @@ let mid=document.createElement("div")
 mid.setAttribute("id","mid")
 var trenddiv=document.createElement("div")
 let bot=document.createElement("div")
+bot.setAttribute("id","bot")
 // console.log(homeTop)
 // ----top data------------------
 let top1=document.createElement("div")
@@ -58,7 +59,7 @@ top2_head.innerText="Featured Partners"
 top2_txt.innerText="Compare across our 500+ partner stores to find the products you want at the best price."
 top1.append(topbanner,tDiv,p)
 top2.append(top2_head,top2_txt)
-div.append(top,mid)
+div.append(top,mid,bot)
 main.append(div)
 // console.log(featurepatner[0]["brand-logo"])
 let top2div=document.createElement("div")
@@ -453,3 +454,45 @@ Community.append(img2,com_h,img3,comdiv,cbtn)
 // console.log(onthearrow(com,"img",0,4 ,comdiv,"com-ul"))
 // console.log(offerin)
 // console.log(inofer)
+let botom=document.createElement("div")
+
+
+let blbt=document.createElement("div")
+
+let blh1=document.createElement("h1")
+blh1.innerText="Download the ModeSens App"
+let blp1=document.createElement("p")
+blp1.innerText="A seamless experience that takes your style to the next level."
+
+let btnb=document.createElement("button")
+btnb.innerText="DOWNLOAD NOW"
+btnb.style.color="white"
+btnb.style.backgroundColor="black"
+let imgdiv=document.createElement("div")
+
+let img1b=document.createElement("img")
+
+img1b.src="https://cdn.modesens.com/static/img/20220826appdownload_en.svg"
+imgdiv.append(img1b)
+blbt.append(blh1,blp1,btnb,imgdiv)
+
+
+
+let blbt2=document.createElement("div")
+
+let blh2=document.createElement("h1")
+
+blh2.innerText="Install the ModeSens Browser Extension"
+let blp2=document.createElement("p")
+blp2.innerText="Get timely, accurate product information every time you browse."
+let btnb2=document.createElement("button")
+btnb2.innerText="DOWNLOAD NOW"
+btnb2.style.color="white"
+btnb2.style.backgroundColor="black"
+
+let img1b2=document.createElement("img")
+
+img1b2.src="https://cdn.modesens.com/static/img/20211109downloadright.png"
+blbt2.append(blh2,blp2,btnb2,img1b2)
+botom.append(blbt,blbt2)
+bot.append(botom)

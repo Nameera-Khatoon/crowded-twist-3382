@@ -1,7 +1,7 @@
 import prod from '../Json/product.json' assert {type: 'json'}
 import cloth from '../Json/clothes.json' assert {type: 'json'}
 var main=document.getElementById("maincontent")
-
+let addtocat=JSON.parse(localStorage.getItem("product"))||[]
 function dat(data,key,x,y,div,id1,ul2){
     var ul2=document.createElement("div")
    
@@ -16,7 +16,14 @@ function dat(data,key,x,y,div,id1,ul2){
         li1.setAttribute("class","container1")
         li2.setAttribute("class","container2")
         let btn=document.createElement("div")
-        btn.innerHTML='<a href="#"> Quick View </a>'
+        btn.innerHTML='<a href="#"> Add to Cart </a>'
+       
+        btn.addEventListener("click",function(){
+            addtocat.push(data[i])
+            // alert("added to cart")
+            localStorage.setItem("product",  JSON.stringify(addtocat))
+            console.log(addtocat)
+        })
         btn.setAttribute("class","button")
         let img1=document.createElement("img");
      
@@ -65,8 +72,14 @@ function wantdata(data,key,x,y,div,id1,option1="",ul2){
             li1.setAttribute("class","container1")
             li2.setAttribute("class","container2")
             let btn=document.createElement("div")
-            btn.innerHTML='<a href="#"> Quick View </a>'
+            btn.innerHTML='<a href="#"> Add to cart </a>'
             btn.setAttribute("class","button")
+              btn.addEventListener("click",function(){
+            addtocat.push(data[i])
+          
+            localStorage.setItem("product",  JSON.stringify(addtocat))
+            console.log(addtocat)
+        })
             let img=document.createElement("img");
          
             let hed=document.createElement('p');
@@ -221,21 +234,7 @@ function myfunc(val){
     }
 }
 
-function myFunction(x) {
-    if (x.matches) { // If media query matches
-      document.body.style.backgroundColor = "yellow";
-    } else {
-     document.body.style.backgroundColor = "pink";
-    }
-  }
 
-  var y= window.matchMedia("(max-width: 1000px)")
-//   y.addEventListener(myFunction)
-  myFunction(y) 
-
-  console.log(y)
- // Call listener function at run time
-// Attach listener function on state changes
 
 
 

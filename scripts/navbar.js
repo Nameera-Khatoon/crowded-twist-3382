@@ -8,11 +8,11 @@ let right_div=document.createElement("div")//right corner
 let tabs=[ {"name":"WOMEN","src":""},{"name":"MEN"},{"name":"BEAUTY"},{"name":"KIDS"},{"name":"HOME"},{"name":"DESIGNERS"},{"name":"COMMUNITY"},{"name":`WHY MODESENS`,"name":`COUPONS`}] //child-left tab
 // COUNTRIES & LANGUAGES, "notification"
 let spans=[
-    { "src":"./Images/nav/unitedstate2.jpg","span":null},
-    {"src":"./Images/nav/icons8-notification-25.png","span":null},
-    {"src":"./Images/nav/shopping-bag2.png","span":null},
-    {"src":"./Images/nav/icons8-male-user-24.png","span":null},
-    {"src":"./Images/nav/icons8-search-301.png","span":"SEARCH"}
+    { "src":"./Images/nav/unitedstate2.jpg","span":null,"href":"#"},
+    {"src":"./Images/nav/icons8-notification-25.png","span":null,"href":"#"},
+    {"src":"./Images/nav/shopping-bag2.png","span":null,"href":"cart.html"},
+    {"src":"./Images/nav/icons8-male-user-24.png","span":null,"href":"signIn.html"},
+    {"src":"./Images/nav/icons8-search-301.png","span":"SEARCH","href":"#"}
 ]
 
 let i=document.createElement("i")
@@ -21,7 +21,7 @@ let i=document.createElement("i")
 spans.forEach(function(el){
     let div=document.createElement("div");
     let btn=document.createElement("a");
-    btn.href="login.html"
+    btn.href=el.href
     btn.target="_self"
     let img=document.createElement("img")
     img.src=el.src

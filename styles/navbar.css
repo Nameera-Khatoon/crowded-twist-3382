@@ -61,7 +61,7 @@ header>div>div:nth-child(4){
 }
 header>div>div:nth-child(4) button{
     background-color:  #fff;
-    border: 1px solid black;
+    border: 0px solid black;
     width: 24px;
     height:20px;
     border: none;
@@ -69,6 +69,10 @@ header>div>div:nth-child(4) button{
 header>div>div:nth-child(4) button img{
     border: 0px solid blue;
     width:17px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 *{
     /* font-family: "sans-serif"; */
