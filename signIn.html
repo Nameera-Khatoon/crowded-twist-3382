@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/sign.css">
+</head>
+<body>
+    <!-- signIn -->
+
+    <div id="signIn">
+       
+        <form  action="">
+            <h1>signIn</h1>
+            <label for="">Email</label>
+            <input type="email" name="" id="email" placeholder="disily@gmail.com">
+            <label for="">password</label>
+            <input type="password" name="" id="pswd">
+            <input type="submit" value="SIGN IN">
+            <p>Don't have an account?
+                &nbsp;<span id="signup"> <a href="signup.html"> Sign Up</a></span></p>
+        </form>
+    </div>
+
+<!-- end-SignIn -->
+</body>
+</html>
+
+<script >
+    let sgnIn=document.querySelector("#signIn>form");
+
+sgnIn.addEventListener("submit", signin1)
+
+function signin1(event){
+    event.preventDefault()
+   let mail= localStorage.getItem("gmail");
+   let phone= localStorage.getItem("phone no");
+    let pswd=localStorage.getItem("password"); 
+    let login=document.querySelector("#email").value;
+    let loginPsd=document.querySelector("#pswd").value;
+
+    if(login==""||loginPsd==""){
+        alert("please enter all the credentials")
+        
+    }
+    else{
+        if((mail==login) && (pswd==loginPsd)){
+        alert("login Successfull")
+        
+        let logined=document.querySelector("#signIn>form")
+        let div =document.createElement("div")
+        div.innerHTML="<a href='index.html'> <h3>click here to return</h3></a>"
+        div.style.color="orange"
+            
+        // logined.innerHTML=null;
+
+        logined.append(div)
+        
+     }else{
+     alert("please enter correct credentials")
+    }
+    
+    }
+
+  
+
+
+}
+</script>

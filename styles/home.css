@@ -133,7 +133,7 @@
   /* position: absolute; */
 }
 #mid{
-  border: 2px solid red;
+  border: 0px solid red;
   /* background-color: aqua; */
   /* width: 100px; */
   height: auto;
@@ -187,8 +187,10 @@
   box-sizing: border-box;
 }
 .button1{
-  border: 1px solid rebeccapurple;
-  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+
+  background-color: black;
+  padding: 20px;
   text-align: center;
   /* width: 10%; */
   display: grid;
@@ -199,13 +201,13 @@
 }
 
 .button1>a{
-
+  color:white;
   text-align: center;
   text-decoration: none;
 }
 .view,.view1,.view2{
   margin-top: 20px;
-  border: 1px solid blue;
+  border: 1px solid rgb(7, 7, 10);
   width: 20%;
   font-size: 20px;
   text-align: center;
@@ -412,4 +414,17 @@ display: flex;
   /* text-align: c; */
   /* margin: 10px; */
   /* margin-top: 20px; */
+}
+#bot>div{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10%;
+  align-items: center;
+  text-align: center;
+}
+
+#bot>div h1{
+  width: 64%;
+  margin: auto;
 }

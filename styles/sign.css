@@ -1,0 +1,56 @@
+h1 {
+    font-size: 50px;
+    color: red;
+    text-align: center;
+  }
+div{
+    border: 0px solid rebeccapurple;
+    width: 30%;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    border: 0px solid red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ 
+ 
+   
+}
+
+
+form{
+    padding: 1rem 2rem 3rem 2rem;
+    width: 100%;
+    margin: auto;
+    border: 0px solid rebeccapurple;
+    font-size: 26px;
+    background-color: #EEEEEE;
+    
+}
+p{
+    text-align: center;
+}
+input{
+
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+input[type ="submit"]{
+
+    background-color: red;
+    color: #EEEEEE;
+    font-size: 30px;
+    font-weight: 700;
+    border:none;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+span{
+    color: blue;
+    text-decoration: underline;
+}
