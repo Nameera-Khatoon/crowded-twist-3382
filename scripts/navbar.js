@@ -20,7 +20,9 @@ let i=document.createElement("i")
 // console.log(i)
 spans.forEach(function(el){
     let div=document.createElement("div");
-    let btn=document.createElement("button");
+    let btn=document.createElement("a");
+    btn.href="login.html"
+    btn.target="_self"
     let img=document.createElement("img")
     img.src=el.src
     let span=document.createElement("span")
@@ -46,6 +48,8 @@ a_logo.append(logoImg)
 
 tabs.forEach(function(el){
     let child=document.createElement("a")
+    child.href="index.html"
+    // child.target="_blank"
     let span=document.createElement("span")
     span.innerText=el.name
     child.append(span)
@@ -55,7 +59,6 @@ tabs.forEach(function(el){
 
 
 let space_div=document.createElement("div");
-
 
 nav.append(a_logo,left_div,space_div,right_div)
 let div=document.createElement("div")

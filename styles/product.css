@@ -1,9 +1,13 @@
 
-
+#maincontent{
+    border: 2px solid red;
+    margin: 6% 0.5%;
+}
 #maincontent > div{
+    
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: auto;
+    grid-template-rows:auto;
     margin: auto;
     border: 1px solid black;
 
@@ -12,7 +16,8 @@
 #left{
 
     /* width: 100px; */
-    background-color: aqua;
+    /* background-color: aqua; */
+    color: black;
 }
 #homP{
     display: grid;
@@ -107,3 +112,35 @@
     padding: 40px;
     padding: 0px;
 }
+#divL1{
+    border: 2px solid red;
+}
+
+
+.select{
+    border: 0.3px solid gray;
+    display: block;
+    width: 90%;
+    padding: 13px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   
+    box-sizing: border-box;
+}
+.select:hover{
+    background-color: black;
+    color: white;
+}
+.subcata{
+    border:none;
+    display: block;
+    width: 90%;
+    /* padding: 13px; */
+    margin: auto;
+    margin-bottom: 1px;
+   
+    box-sizing: border-box;
+}
+
+

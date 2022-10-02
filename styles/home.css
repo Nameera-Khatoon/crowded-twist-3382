@@ -5,7 +5,7 @@
 #main-div{
   border: 0px solid black;
   width: 80%;
-  height: 100000px;
+  /* height: 100000px; */
   margin: auto;
    
 }
@@ -128,8 +128,8 @@
 
 #offers{
   display: grid;
-  /* grid-template-columns: repeat(4,1fr); */
-  /* grid-template-rows: 0px; */
+  /* grid-template-columns: repeat(2,1fr); */
+  /* grid-template-rows: repeat(2,auto); */
   /* position: absolute; */
 }
 #mid{
@@ -155,10 +155,11 @@
 #inoffer{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(10,1fr);
+  grid-template-columns: repeat(3,1fr);
   grid-template-rows:auto ;
   gap:40px;
   overflow: hidden;
+  box-sizing: border-box;
   /* margin: auto; */
   /* margin-left: 30px; */
   /* padding: 10px; */
@@ -167,7 +168,12 @@
 }
 #inoffer>div{
   border: 0px solid red;
+  box-sizing: border-box;
+  /* pad */
   /* transform: translateX(100%); */
+}
+#inoffer img{
+  width: 100%;
 }
 .container1-ch2,.container1-ch1{
   text-align: center;
@@ -178,23 +184,41 @@
   position: relative;
   bottom: 50px;
   color: white;
+  box-sizing: border-box;
 }
 .button1{
   border: 1px solid rebeccapurple;
   padding: 10px;
-  width: 40%;
+  text-align: center;
+  /* width: 10%; */
+  display: grid;
+  justify-content: center;
   margin: auto;
+  box-sizing: border-box;
+  
 }
+
 .button1>a{
+
+  text-align: center;
   text-decoration: none;
 }
-.view{
+.view,.view1,.view2{
   margin-top: 20px;
   border: 1px solid blue;
   width: 20%;
   font-size: 20px;
   text-align: center;
 
+}
+.view1
+{
+  width: 13%;
+  /* margin-right: 20p; */
+}
+.view2{
+  width: 10%;
+  margin-left: 41%;
 }
 /* .midoffer{ */
   /* background-color: red; */
@@ -208,7 +232,7 @@
   gap:30px;
   text-align: center;
   overflow: hidden;
-} */
+*/
 
 
 
@@ -263,33 +287,29 @@
 #homP{
   display: grid;
   grid-template-columns:repeat(4,2fr);
-  /* grid-template-rows: repeat(10,auto); */
-  /* border: 1px solid black; */
-  
+
 }
 
 #homP img{
   width: 70%;
+  padding-top: 20px;
   min-height: 250px;
   max-height: 250px;
   display: block;
   margin: auto;
-  /* margin: 30px; */
-  /* height: 500px; */
+
 }
 
 .hide-bt{
   font-size: 14px;
-  /* padding: 5px 25px; */
+
   display:block;
   
   margin: auto;
   opacity: 1;
-  /* position: static; */
   height: 10; width: 220;
   text-align: center;
-  /* bottom: 4rem; */
-  /* display: none; */
+
 }
 
 .hide-bt:hover{
@@ -312,9 +332,6 @@
   border: 0.3px solid;
 
   width: 200px;
-  /* display: block;
-   */
-  /* padding-top: 20px; */
   border-radius: 3px;
   padding:8px 22px; 
   text-align: center;
@@ -357,12 +374,9 @@
   line-height: 10px;
 
 }
-/* .container */
+
 #recent >div , #trend>div{
 display: flex;
-/* padding-right: 100px; */
-/* gap: -40px; */
-
 }
 
 .arrow3,.arrow4{
@@ -373,25 +387,29 @@ display: flex;
   display: flex;
   justify-content: left;
   align-items: center;
-  
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0.2px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
-/* padding-left: 10rem; */
-/* margin-right: ; */
-/* position: relative; */
-/* margin-right: 400px; */
 }
-/* .container{
-  width: 100px;
-} */
-.container0{
-  border: 0.2px solid rgba(205, 193, 193,0.3);
- /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0.2px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
-/* }
-#inoffer img{
-height: 420px;
-} */
-
-#inoffer {
+.com-ul{
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   margin: auto;
-  margin-left: 100px;
+  /* gap: 0px; */
+}
+.com-ul img{
+  width: 90%;
+  /* width: 20%; */
+  padding: 20px;
+  min-height: 350px;
+  max-height: 200px;
+}
+#comunity>div{
+  display: grid;
+  grid-template-columns:20px 1fr 20px;
+  /* margin-top: 300px; */
+  /* margin-top: 200px; */
+}
+#comunity{
+  /* text-align: c; */
+  /* margin: 10px; */
+  /* margin-top: 20px; */
 }
